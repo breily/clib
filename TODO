@@ -1,0 +1,6 @@
+
+[ ] blist_extend(blist *a, blist *b)
+[ ] Implement bhash tables
+[ ] Maybe one with separate chaining, one with open addressing
+[ ] Implement a binary search tree
+[ ] Then a self balancing binary search tree
