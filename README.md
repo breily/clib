@@ -6,93 +6,92 @@ clib
 
 functions
 ---------
-    * list functions
-    ----------------
- 
-        * blib uses a doubly linked list to wrap void pointers, so you can
-          store whatever you want.
-        * provided functions for indexing/appending/removing, as well as 
-          functions to treat the list as a stack or a queue.
+* list functions
+----------------
 
-        * basic data type: struct blist
-        * blist_init()
-        * blist_einit(void **, int)
-        * blist_free(blist *)
-        * blist_length(blist *)
-        * blist_isempty(blist *)
-        * blist_append(blist *, void *)
-        * blist_remove(blist *, int)
-        * blist_at(blist *, int)
-        * blist_push(blist *, void *)
-        * blist_pop(blist *)
-        * blist_peek(blist *)
-        * blist_enqueue(blist *, void *)
-        * blist_dequeue(blist *)
+    * blib uses a doubly linked list to wrap void pointers, so you can
+      store whatever you want.
+    * provided functions for indexing/appending/removing, as well as
+      functions to treat the list as a stack or a queue.
 
-    * string functions
-    ------------------
+    * basic data type: `struct blist`
+    * `blist_init()`
+    * `blist_einit(void **, int)`
+    * `blist_free(blist *)`
+    * `blist_length(blist *)`
+    * `blist_isempty(blist *)`
+    * `blist_append(blist *, void *)`
+    * `blist_remove(blist *, int)`
+    * `blist_at(blist *, int)`
+    * `blist_push(blist *, void *)`
+    * `blist_pop(blist *)`
+    * `blist_peek(blist *)`
+    * `blist_enqueue(blist *, void *)`
+    * `blist_dequeue(blist *)`
 
-        * blib wraps strings in a struct to track their length and some
-          other planned information.
-        * does not require string.h
+* string functions
+------------------
 
-        * basic data type: struct bstring
-        * bstring_init(char *)
-        * bstring_length(bstring *)
-        * bstring_contains(bstring *)
-        * bstring_at(bstring *, int)
-        * bstring_equal(bstring *, bstring *)
-        * bstring_concat(bstring *, bstring *)
-        * bstring_nconcat(bstring *, bstring *, int)
-        * bstring_rconcat(bstring *, char *)
-        * bstring_rnconcat(bstring *, char *, int)
+    * blib wraps strings in a struct to track their length and some
+      other planned information.
+    * does not require string.h
+    * basic data type: `struct bstring`
+    * `bstring_init(char *)`
+    * `bstring_length(bstring *)`
+    * `bstring_contains(bstring *)`
+    * `bstring_at(bstring *, int)`
+    * `bstring_equal(bstring *, bstring *)`
+    * `bstring_concat(bstring *, bstring *)`
+    * `bstring_nconcat(bstring *, bstring *, int)`
+    * `bstring_rconcat(bstring *, char *)`
+    * `bstring_rnconcat(bstring *, char *, int)`
 
-    * memory functions
-    ------------------
-        
-        * blib wraps some functions to print error messages
+* memory functions
+------------------
 
-        * bmalloc(size_t)
-        * bcalloc(size_t, size_t);
-        * brealloc(void *, size_t);
+    * blib wraps some functions to print error messages
 
-    * functional programming
-    ------------------------
+    * `bmalloc(size_t)`
+    * `bcalloc(size_t, size_t)`
+    * `brealloc(void *, size_t)`
 
-        * attempting to add functional concepts to C
-        * NOTE: this section probably requires more work
+* functional programming
+------------------------
 
-        * map(void *(*func)(void *), blistd *)
-        * filter(void *(*func)(void *), blistd *)
+    * attempting to add functional concepts to C
+    * NOTE: this section probably requires more work
 
-    * io functions
-    --------------
+    * `map(void *(*func)(void *), blistd *)`
+    * `filter(void *(*func)(void *), blistd *)`
 
-        * implement basic io functionality
+* io functions
+--------------
 
-        * bio_calloc()
-        * bio_free()
-        * breadline(char *)
-        * breadline_map(int (*func)(char *), char *)
+    * implement basic io functionality
 
-    * hash/map functions
-    ---------------------
+    * `bio_calloc()`
+    * `bio_free()`
+    * `breadline(char *)`
+    * `breadline_map(int (*func)(char *), char *)`
 
-        * hash table implentation
-        * NOTE: this section require much more work
+* hash/map functions
+---------------------
 
-        * bhash_init()
-        * bhash_lookup(bhash *, void *)
-        * bhash_insert(bhash *, void *, void *)
-        * bhash_remove(bhash *, void *)
-        * __bhash_hash_function(bhash *, void *)
+    * hash table implentation
+    * NOTE: this section require much more work
 
-    * trie implementation
-    ---------------------
+    * `bhash_init()`
+    * `bhash_lookup(bhash *, void *)`
+    * `bhash_insert(bhash *, void *, void *)`
+    * `bhash_remove(bhash *, void *)`
+    * `__bhash_hash_function(bhash *, void *)`
 
-        * extremely early stages
+* trie implementation
+---------------------
 
-        * btrie_init()
-        * btrie_insert(btrie *, char *, void *)
-        * btrie_lookuo(btrie *, char *)
+    * extremely early stages
+
+    * `btrie_init()`
+    * `btrie_insert(btrie *, char *, void *)`
+    * `btrie_lookuo(btrie *, char *)`
 

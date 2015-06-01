@@ -23,9 +23,8 @@ int bstring_length(bstring *str) {
 }
 
 int bstring_contains_char(bstring *str, char search) {
-    int i = 0;
-    for (; i < str->length; i++) {
-        if (str->string[i] == search) return 1;
+    for (int i = 0; i < str->length; i++) {
+        if (str->string[i] == search) return i;
     }
     return 0;
 }
